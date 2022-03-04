@@ -5,6 +5,10 @@ Being like a bookmark of browsers, but in a website. Saving your favorite videos
 
 # Log
 
+### 0.2v (Form)
+- Basic inputs
+- Change Handlers functions
+
 ### 0.1.3v (Basic Container)
 - Container, Mark, New component
 - Loop creation of marks

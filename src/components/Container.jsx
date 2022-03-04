@@ -6,7 +6,7 @@ function Container(props) { // Container with the video marks and the button to 
     const { marks } = props
 
     return (
-        <div className='Container'>
+        <div className='container'>
             <New />
             {
                 marks.map((value) => { // Loop to create the marks
