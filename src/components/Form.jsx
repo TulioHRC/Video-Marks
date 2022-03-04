@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Form extends Component {
+class Form extends Component { // Form to add more video marks
   render() {
     return (
       <div className='form'>
