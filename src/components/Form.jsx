@@ -23,14 +23,14 @@ class Form extends Component { // Form to add more video marks
     }))
   }
 
-  render() {
+  render() { // Add form when I learn how to use Node, express, .... with ReactJS
     return (
       <div className='form'>
-        <form action="">
+    
           <input type="text" value={this.state.name} placeholder='Name' onChange={this.changeHandlerName} required />
           <input type="text" value={this.state.url} placeholder='URL' onChange={this.changeHandlerUrl} required />
-          <button type="submit">Add</button>
-        </form>
+          <button type="submit" onClick={() => this.props.addFunction(this.state.name, this.state.url)}>Add</button>
+        
       </div>
     )
   }

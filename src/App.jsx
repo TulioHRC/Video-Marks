@@ -9,7 +9,20 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      marks: []
+      marks: [],
+      urls: [] // To avoid repeated video marks
+    }
+  }
+
+  addMark = (n, url) => { // Adding video marks to the marks list of the state
+    if (!(this.state.urls.includes(url))) {
+      this.setState((prevState) => ({
+        marks: [...prevState.marks, [n, url]],
+        urls: [...prevState.urls, url]
+      }), () => console.log(this.state))
+    } else {
+      // Raise an error
+      console.log("Repeated URL!")
     }
   }
 
@@ -17,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
       <Header name="Video Marks"/>
-      <Form />
+      <Form addFunction={this.addMark} />
       <Container marks={this.state.marks} />
       <div className='A'>a</div>
     </div>
