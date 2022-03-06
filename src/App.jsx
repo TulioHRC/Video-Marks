@@ -36,7 +36,7 @@ class App extends Component {
       urls: prevState.urls,
       formMode: !prevState.formMode
     })), () => {
-      document.getElementsByClassName('form')[0].style.display = (this.state.formMode === 0) ? 'block' : 'none'
+      document.getElementsByClassName('form')[0].style.display = (this.state.formMode == 0) ? 'block' : 'none'
     })
   }
 

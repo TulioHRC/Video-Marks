@@ -6,6 +6,7 @@ function Mark(props) { // Each video mark "button"
     return (
         <div className='container-mark' key={value[1]}>
             <h2 id='name'>{value[0]}</h2>
+            <a href={value[1]}>Go</a>
         </div>
     )
 }
