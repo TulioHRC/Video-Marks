@@ -132,10 +132,6 @@ input, select {
     display: none; /* Change when + button clicked */
 }
 
-.A {
-    padding-bottom:2000px;
-}
-
 .container-new {
     position: fixed;
     bottom: 5%;

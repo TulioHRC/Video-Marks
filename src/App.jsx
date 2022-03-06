@@ -17,6 +17,8 @@ class App extends Component {
   }
 
   addMark = (n, url) => { // Adding video marks to the marks list of the state
+    if (!(url.includes("https:\\\\"))){ url = "https:\\\\" + url }
+
     if (!(this.state.urls.includes(url))) {
       this.setState((prevState) => ({
         marks: [...prevState.marks, [n, url]],
@@ -46,7 +48,6 @@ class App extends Component {
       <Header name="Video Marks"/>
       <Form addFunction={this.addMark} />
       <Container marks={this.state.marks} newFunction={this.newFormAppear} />
-      <div className='A'>a</div>
     </div>
     )
   }

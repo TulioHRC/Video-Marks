@@ -5,6 +5,14 @@ Being like a bookmark of browsers, but in a website. Saving your favorite videos
 
 # Log
 
+### 0.3.0v (Marks logic)
+- URL button on each mark
+- Working marks
+- 'https:\\\\' add if not in already
+
+### 0.2.3v (Hotfix)
+- Error in the 'New' button
+
 ### 0.2.2v ('New' button)
 - 'New' button working
 - Form mode on state
