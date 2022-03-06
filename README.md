@@ -5,6 +5,8 @@ Being like a bookmark of browsers, but in a website. Saving your favorite videos
 
 # Log
 
+### 0.3.1v (Favicon)
+
 ### 0.3.0v (Marks logic)
 - URL button on each mark
 - Working marks
