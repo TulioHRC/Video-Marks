@@ -7,7 +7,7 @@ function Container(props) { // Container with the video marks and the button to 
 
     return (
         <div className='container'>
-            <New />
+            <New newFunction={props.newFunction} />
             {
                 marks.map((value) => { // Loop to create the marks
                     return <Mark value={value} />

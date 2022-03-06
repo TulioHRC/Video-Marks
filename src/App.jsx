@@ -8,9 +8,11 @@ class App extends Component {
   
   constructor() {
     super()
+
     this.state = {
       marks: [],
-      urls: [] // To avoid repeated video marks
+      urls: [], // To avoid repeated video marks
+      formMode: 0 // Form display on css
     }
   }
 
@@ -18,7 +20,8 @@ class App extends Component {
     if (!(this.state.urls.includes(url))) {
       this.setState((prevState) => ({
         marks: [...prevState.marks, [n, url]],
-        urls: [...prevState.urls, url]
+        urls: [...prevState.urls, url],
+        formMode: prevState.formMode
       }), () => console.log(this.state))
     } else {
       // Raise an error
@@ -26,12 +29,23 @@ class App extends Component {
     }
   }
 
+  newFormAppear = () => {
+
+    this.setState((prevState => ({
+      marks: prevState.marks,
+      urls: prevState.urls,
+      formMode: !prevState.formMode
+    })), () => {
+      document.getElementsByClassName('form')[0].style.display = (this.state.formMode === 0) ? 'block' : 'none'
+    })
+  }
+
   render() {
     return (
       <div className="App">
       <Header name="Video Marks"/>
       <Form addFunction={this.addMark} />
-      <Container marks={this.state.marks} />
+      <Container marks={this.state.marks} newFunction={this.newFormAppear} />
       <div className='A'>a</div>
     </div>
     )

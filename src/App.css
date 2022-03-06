@@ -128,8 +128,17 @@ input, select {
     width: 68%;
     padding: 1% 1%;
     background-color: rgb(199, 199, 199);
+
+    display: none; /* Change when + button clicked */
 }
 
 .A {
     padding-bottom:2000px;
+}
+
+.container-new {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 20px;
 }

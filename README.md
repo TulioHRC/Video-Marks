@@ -5,6 +5,10 @@ Being like a bookmark of browsers, but in a website. Saving your favorite videos
 
 # Log
 
+### 0.2.2v ('New' button)
+- 'New' button working
+- Form mode on state
+
 ### 0.2.1v (Mark basic saving)
 - Add Mark function
 - No repeat conditional
